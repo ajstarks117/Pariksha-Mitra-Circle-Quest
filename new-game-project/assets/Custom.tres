@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ueuj5qbd8wqc"]
+
+[ext_resource type="Texture2D" uid="uid://bopkjnxcei86p" path="res://assets/Large tiles/Thin outline/tile_0000.png" id="2_7x43g"]
+[ext_resource type="Texture2D" uid="uid://baksd3xc6wrw5" path="res://assets/Large tiles/Thin outline/tile_0001.png" id="3_bvo0f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8rwi"]
+texture = ExtResource("2_7x43g")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prx6u"]
+texture = ExtResource("2_7x43g")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdh4e"]
+texture = ExtResource("2_7x43g")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxwsi"]
+texture = ExtResource("3_bvo0f")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[resource]
+Button/colors/font_color = Color(0.0177325, 0.0177324, 0.0177324, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = null
+Button/styles/hover = SubResource("StyleBoxTexture_v8rwi")
+Button/styles/normal = SubResource("StyleBoxTexture_prx6u")
+Button/styles/pressed = SubResource("StyleBoxTexture_rdh4e")
+Label/colors/font_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
+Label/font_sizes/font_size = 32
+Label/fonts/font = null
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_kxwsi")

@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://ca10w6y8a0opl"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_8j45o"]
+[ext_resource type="Texture2D" uid="uid://c70j1b3f44yfi" path="res://assets/math bg.png" id="1_ae2xv"]
+[ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="2_1pl1x"]
+[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Pacifico/Pacifico-Regular.ttf" id="3_7yhm8"]
+
+[sub_resource type="Theme" id="Theme_hnqev"]
+Label/fonts/font = ExtResource("3_7yhm8")
+
+[sub_resource type="Theme" id="Theme_e16kv"]
+Button/fonts/font = ExtResource("3_7yhm8")
+
+[sub_resource type="Theme" id="Theme_qae1j"]
+Button/fonts/font = ExtResource("3_7yhm8")
+
+[node name="Menu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8j45o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("1_ae2xv")
+
+[node name="Title" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 166.0
+offset_right = 784.0
+offset_bottom = 244.0
+theme = ExtResource("2_1pl1x")
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 2
+theme = SubResource("Theme_hnqev")
+text = "Circle Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OPTIONS" type="PanelContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 376.0
+offset_top = 256.0
+offset_right = 784.0
+offset_bottom = 458.0
+theme = ExtResource("2_1pl1x")
+
+[node name="MarginContainer" type="MarginContainer" parent="OPTIONS"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OPTIONS/MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="OPTIONS/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_e16kv")
+text = "Play"
+
+[node name="Exit" type="Button" parent="OPTIONS/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_qae1j")
+text = "Exit
+"
+
+[connection signal="pressed" from="OPTIONS/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="OPTIONS/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://1d75db2kglin"]
+
+[ext_resource type="Texture2D" uid="uid://c5jrb1bcprlwx" path="res://assets/Large tiles/Thick outline/tile_0029.png" id="1_enxbx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5nfhj"]
+texture = ExtResource("1_enxbx")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u7gt"]
+texture = ExtResource("1_enxbx")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 18
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxTexture_5nfhj")
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/font_sizes/font_size = 18
+LineEdit/styles/normal = SubResource("StyleBoxTexture_3u7gt")

@@ -21,6 +21,16 @@ texture = ExtResource("2_helv2")
 
 [node name="Center" type="Node2D" parent="GameRoot/CircleSprite"]
 
+[node name="StartMarker" type="Marker2D" parent="GameRoot"]
+position = Vector2(639, 352)
+
+[node name="ColorRect" type="ColorRect" parent="GameRoot/StartMarker"]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 4.0
+offset_bottom = 2.0
+color = Color(0.753964, 0.079013, 0.223834, 1)
+
 [node name="UI" type="CanvasLayer" parent="GameRoot"]
 
 [node name="Diameter" type="LineEdit" parent="GameRoot/UI"]

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bisw7xwbvh487"
-path="res://.godot/imported/Pacifico-Regular.ttf-f5d7ceff50103d195be179e85a2a5b84.fontdata"
+path="res://.godot/imported/Pacifico-Regular.ttf-03ce6e4b39ba454df69090c48d8bbd8a.fontdata"
 
 [deps]
 
-source_file="res://assets/Pacifico/Pacifico-Regular.ttf"
-dest_files=["res://.godot/imported/Pacifico-Regular.ttf-f5d7ceff50103d195be179e85a2a5b84.fontdata"]
+source_file="res://assets/Font/Pacifico-Regular.ttf"
+dest_files=["res://.godot/imported/Pacifico-Regular.ttf-03ce6e4b39ba454df69090c48d8bbd8a.fontdata"]
 
 [params]
 

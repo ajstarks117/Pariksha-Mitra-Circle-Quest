@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhack83wf72bq"]
+
+[ext_resource type="Script" path="res://scripts/level_3.gd" id="1_2uoky"]
+[ext_resource type="Theme" uid="uid://1d75db2kglin" path="res://assets/label.tres" id="2_jfkyu"]
+
+[node name="level3" type="Node2D"]
+script = ExtResource("1_2uoky")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="AngleSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 583.0
+offset_right = 788.0
+offset_bottom = 599.0
+
+[node name="AngleLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 570.0
+offset_right = 1075.0
+offset_bottom = 616.0
+theme = ExtResource("2_jfkyu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArcLengthLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 567.0
+offset_right = 275.0
+offset_bottom = 620.0
+theme = ExtResource("2_jfkyu")
+horizontal_alignment = 1
+vertical_alignment = 1

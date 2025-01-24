@@ -1,18 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca10w6y8a0opl"]
+[gd_scene load_steps=7 format=3 uid="uid://ca10w6y8a0opl"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_8j45o"]
 [ext_resource type="Texture2D" uid="uid://c70j1b3f44yfi" path="res://assets/math bg.png" id="1_ae2xv"]
 [ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="2_1pl1x"]
-[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Pacifico/Pacifico-Regular.ttf" id="3_7yhm8"]
 
 [sub_resource type="Theme" id="Theme_hnqev"]
-Label/fonts/font = ExtResource("3_7yhm8")
+Label/fonts/font = null
 
 [sub_resource type="Theme" id="Theme_e16kv"]
-Button/fonts/font = ExtResource("3_7yhm8")
+Button/fonts/font = null
 
 [sub_resource type="Theme" id="Theme_qae1j"]
-Button/fonts/font = ExtResource("3_7yhm8")
+Button/fonts/font = null
 
 [node name="Menu" type="Control"]
 texture_filter = 1
@@ -52,7 +51,7 @@ layout_mode = 0
 offset_left = 376.0
 offset_top = 256.0
 offset_right = 784.0
-offset_bottom = 458.0
+offset_bottom = 437.0
 theme = ExtResource("2_1pl1x")
 
 [node name="MarginContainer" type="MarginContainer" parent="OPTIONS"]

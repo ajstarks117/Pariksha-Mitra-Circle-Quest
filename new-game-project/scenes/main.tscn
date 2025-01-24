@@ -15,6 +15,7 @@ color = Color(0.782307, 0.585525, 0.461707, 1)
 [node name="GameRoot" type="Node2D" parent="."]
 
 [node name="CircleSprite" type="Sprite2D" parent="GameRoot"]
+visible = false
 position = Vector2(832, 352)
 scale = Vector2(0.919156, 0.919156)
 texture = ExtResource("2_helv2")
@@ -64,6 +65,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="LineDrawer" type="Line2D" parent="GameRoot"]
+[node name="CircleOutline" type="Line2D" parent="GameRoot"]
 position = Vector2(1, 0)
 default_color = Color(0.885954, 0, 0.178702, 1)

@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4xvome57id8e"]
+
+[ext_resource type="Script" path="res://scripts/level1.gd" id="1_omein"]
+[ext_resource type="Theme" uid="uid://1d75db2kglin" path="res://assets/label.tres" id="2_0gsjw"]
+[ext_resource type="Script" path="res://scripts/circle.gd" id="2_koe81"]
+[ext_resource type="Texture2D" uid="uid://c5jrb1bcprlwx" path="res://assets/Large tiles/Thick outline/tile_0029.png" id="4_1svpj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7rgkt"]
+texture = ExtResource("4_1svpj")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_68dag"]
+LineEdit/styles/normal = SubResource("StyleBoxTexture_7rgkt")
+
+[node name="level_1" type="Node2D"]
+script = ExtResource("1_omein")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1226.0
+offset_bottom = 700.0
+color = Color(0.667736, 0.532481, 0.4004, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 738.0
+offset_top = 544.0
+offset_right = 1036.0
+offset_bottom = 614.0
+theme = ExtResource("2_0gsjw")
+text = ".."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+script = ExtResource("2_koe81")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 186.0
+offset_top = 540.0
+offset_right = 481.0
+offset_bottom = 613.0
+theme = SubResource("Theme_68dag")
+placeholder_text = "ENTER DIAMETER (in cm)"
+alignment = 1
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1019.0
+offset_top = 13.0
+offset_right = 1142.0
+offset_bottom = 69.0
+theme = ExtResource("2_0gsjw")
+text = "Next -->"
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

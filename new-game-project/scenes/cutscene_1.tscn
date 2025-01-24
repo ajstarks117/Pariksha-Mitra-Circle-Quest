@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://kglyk0f140nj"]
+
+[ext_resource type="Script" path="res://scripts/cutscene_1.gd" id="1_3o8pb"]
+[ext_resource type="Texture2D" uid="uid://dmoe78w1x8app" path="res://assets/bg1.jpg" id="1_cyifn"]
+[ext_resource type="Texture2D" uid="uid://sfny4qqyste5" path="res://assets/Untitled_design-removebg-preview.png" id="3_728h6"]
+[ext_resource type="FontFile" uid="uid://bahv18ejvns75" path="res://assets/Font/Chalktastic-r78L.ttf" id="3_ql6lh"]
+
+[sub_resource type="Theme" id="Theme_12dl0"]
+RichTextLabel/font_sizes/bold_italics_font_size = 30
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_ql6lh")
+RichTextLabel/fonts/normal_font = ExtResource("3_ql6lh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta7q4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st5qg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gk30"]
+
+[sub_resource type="Theme" id="Theme_bdn5f"]
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("3_ql6lh")
+Button/styles/hover = SubResource("StyleBoxTexture_ta7q4")
+Button/styles/normal = SubResource("StyleBoxTexture_st5qg")
+Button/styles/pressed = SubResource("StyleBoxTexture_2gk30")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vts82"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_je5l5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fw0gl"]
+
+[sub_resource type="Theme" id="Theme_q1u88"]
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("3_ql6lh")
+Button/styles/hover = SubResource("StyleBoxTexture_vts82")
+Button/styles/normal = SubResource("StyleBoxTexture_je5l5")
+Button/styles/pressed = SubResource("StyleBoxTexture_fw0gl")
+
+[node name="cutscene1" type="Node2D"]
+script = ExtResource("1_3o8pb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("1_cyifn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1.0
+offset_top = 52.0
+offset_right = 751.0
+offset_bottom = 697.0
+theme = SubResource("Theme_12dl0")
+bbcode_enabled = true
+text = "[center][color=white]
+	Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
+	Let’s dive deeper and uncover the concept behind this phenomenon.
+
+	[b][i]Understanding the Relationship Between the Circumference and the Diameter :[/i][/b]
+
+	The circumference and diameter of a circle share a fascinating connection that is fundamental to geometry . 
+	Are you ready to explore this relationship? Let's learn together!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(963, 340)
+scale = Vector2(1.286, 1.37469)
+texture = ExtResource("3_728h6")
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1017.0
+offset_top = 581.0
+offset_right = 1140.0
+offset_bottom = 637.0
+theme = SubResource("Theme_bdn5f")
+text = "Next -->"
+
+[node name="Previous" type="Button" parent="."]
+offset_left = 841.0
+offset_top = 581.0
+offset_right = 998.0
+offset_bottom = 637.0
+theme = SubResource("Theme_q1u88")
+text = "<-- Previous"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

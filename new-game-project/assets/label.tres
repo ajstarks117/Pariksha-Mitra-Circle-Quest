@@ -1,6 +1,27 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://1d75db2kglin"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://1d75db2kglin"]
 
 [ext_resource type="Texture2D" uid="uid://c5jrb1bcprlwx" path="res://assets/Large tiles/Thick outline/tile_0029.png" id="1_enxbx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yojc"]
+texture = ExtResource("1_enxbx")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0u3v"]
+texture = ExtResource("1_enxbx")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srsj3"]
+texture = ExtResource("1_enxbx")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5nfhj"]
 texture = ExtResource("1_enxbx")
@@ -17,6 +38,11 @@ texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
 [resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 24
+Button/styles/hover = SubResource("StyleBoxTexture_5yojc")
+Button/styles/normal = SubResource("StyleBoxTexture_f0u3v")
+Button/styles/pressed = SubResource("StyleBoxTexture_srsj3")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)

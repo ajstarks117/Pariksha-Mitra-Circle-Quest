@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://bn5w0ne7nftt3"]
+
+[ext_resource type="Script" path="res://scripts/cutscene_2.gd" id="1_0ofei"]
+[ext_resource type="Texture2D" uid="uid://dmoe78w1x8app" path="res://assets/bg1.jpg" id="1_836ow"]
+[ext_resource type="FontFile" uid="uid://bahv18ejvns75" path="res://assets/Font/Chalktastic-r78L.ttf" id="2_l0nyu"]
+
+[sub_resource type="Theme" id="Theme_yosch"]
+RichTextLabel/font_sizes/bold_italics_font_size = 30
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_l0nyu")
+RichTextLabel/fonts/normal_font = ExtResource("2_l0nyu")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_muwpx"]
+load_path = "res://.godot/imported/Untitled_design-removebg-preview.png-62ae626fe1c09e19d4c2de1411782847.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6qriw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aidee"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfya1"]
+
+[sub_resource type="Theme" id="Theme_3ey1q"]
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("2_l0nyu")
+Button/styles/hover = SubResource("StyleBoxTexture_6qriw")
+Button/styles/normal = SubResource("StyleBoxTexture_aidee")
+Button/styles/pressed = SubResource("StyleBoxTexture_vfya1")
+
+[node name="cutscene2" type="Node2D"]
+script = ExtResource("1_0ofei")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("1_836ow")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 2
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 754.0
+offset_bottom = 627.0
+theme = SubResource("Theme_yosch")
+bbcode_enabled = true
+text = "[center][color=white]
+	Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
+	Let’s dive deeper and uncover the concept behind this phenomenon.
+
+	[b][i]Understanding the Relationship Between the Circumference and the Diameter :[/i][/b]
+
+	The circumference and diameter of a circle share a fascinating connection that is fundamental to geometry . 
+	Are you ready to explore this relationship? Let's learn together!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(963, 340)
+scale = Vector2(1.286, 1.37469)
+texture = SubResource("CompressedTexture2D_muwpx")
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1017.0
+offset_top = 581.0
+offset_right = 1140.0
+offset_bottom = 637.0
+theme = SubResource("Theme_3ey1q")
+text = "Next -->"
+
+[node name="Previous" type="Button" parent="."]
+offset_left = 841.0
+offset_top = 581.0
+offset_right = 998.0
+offset_bottom = 637.0
+theme = SubResource("Theme_3ey1q")
+text = "<-- Previous"
+
+[connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

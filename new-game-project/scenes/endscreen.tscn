@@ -1,0 +1,109 @@
+[gd_scene load_steps=13 format=3 uid="uid://ckqy5tdvi4gia"]
+
+[ext_resource type="Texture2D" uid="uid://cvocpbir243ih" path="res://assets/endbg.webp" id="1_gsklj"]
+[ext_resource type="Script" path="res://scripts/endscreen.gd" id="1_i54l1"]
+[ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="3_b2udv"]
+[ext_resource type="Texture2D" uid="uid://bigip300o6m6r" path="res://assets/Large tiles/Thick outline/tile_0001.png" id="4_t2xdw"]
+[ext_resource type="Texture2D" uid="uid://c7gud2v3xsvfq" path="res://assets/Large tiles/Thick outline/tile_0000.png" id="5_6xtnc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xb8q5"]
+texture = ExtResource("4_t2xdw")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="Theme" id="Theme_ocbic"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_xb8q5")
+
+[sub_resource type="Theme" id="Theme_1a0hk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwsmr"]
+texture = ExtResource("5_6xtnc")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cwnfy"]
+texture = ExtResource("5_6xtnc")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtgb0"]
+texture = ExtResource("5_6xtnc")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_ce867"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_vwsmr")
+Button/styles/normal = SubResource("StyleBoxTexture_cwnfy")
+Button/styles/pressed = SubResource("StyleBoxTexture_xtgb0")
+
+[node name="Endscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i54l1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+texture = ExtResource("1_gsklj")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 148.0
+offset_right = 838.0
+offset_bottom = 402.0
+theme = ExtResource("3_b2udv")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme = ExtResource("3_b2udv")
+text = "Congrats! You have learnt all the concepts in this game & the chapter Circles
+
+Thanks for Playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 405.0
+offset_right = 836.0
+offset_bottom = 528.0
+theme = SubResource("Theme_ocbic")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_1a0hk")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ce867")
+text = "Exit
+"
+
+[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

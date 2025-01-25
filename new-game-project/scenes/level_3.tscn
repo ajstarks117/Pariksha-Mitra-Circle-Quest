@@ -1,10 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhack83wf72bq"]
+[gd_scene load_steps=8 format=3 uid="uid://bhack83wf72bq"]
 
 [ext_resource type="Script" path="res://scripts/level_3.gd" id="1_2uoky"]
 [ext_resource type="Theme" uid="uid://1d75db2kglin" path="res://assets/label.tres" id="2_jfkyu"]
+[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Font/Pacifico-Regular.ttf" id="2_k2t8m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxrs7"]
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 70
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 70.0
+expand_margin_top = 8.0
+expand_margin_right = 6.0
+expand_margin_bottom = 8.0
+shadow_color = Color(0.129558, 0.129558, 0.129558, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(1.925, 2.105)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p7vx"]
+bg_color = Color(0.498039, 0.423529, 1, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m77qf"]
+bg_color = Color(0.498039, 0.423529, 1, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_tojnq"]
+font = ExtResource("2_k2t8m")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
 
 [node name="level3" type="Node2D"]
 script = ExtResource("1_2uoky")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -18,12 +61,26 @@ offset_left = 411.0
 offset_top = 583.0
 offset_right = 788.0
 offset_bottom = 599.0
+theme_override_constants/center_grabber = 1
+theme_override_styles/slider = SubResource("StyleBoxFlat_pxrs7")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3p7vx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_m77qf")
+
+[node name="Label" type="Label" parent="Control/AngleSlider"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = -3.0
+offset_bottom = 20.0
+text = "Angle Slider"
+label_settings = SubResource("LabelSettings_tojnq")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AngleLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 920.0
-offset_top = 570.0
-offset_right = 1075.0
+offset_left = 908.0
+offset_top = 567.0
+offset_right = 1107.0
 offset_bottom = 616.0
 theme = ExtResource("2_jfkyu")
 horizontal_alignment = 1
@@ -38,3 +95,13 @@ offset_bottom = 620.0
 theme = ExtResource("2_jfkyu")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1004.0
+offset_top = 16.0
+offset_right = 1127.0
+offset_bottom = 72.0
+theme = ExtResource("2_jfkyu")
+text = "Next -->"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

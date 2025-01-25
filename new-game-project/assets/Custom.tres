@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ueuj5qbd8wqc"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://ueuj5qbd8wqc"]
 
 [ext_resource type="Texture2D" uid="uid://bopkjnxcei86p" path="res://assets/Large tiles/Thin outline/tile_0000.png" id="2_7x43g"]
 [ext_resource type="Texture2D" uid="uid://b21f1m2surl1p" path="res://assets/Large tiles/Thick outline/tile_0018.png" id="2_qj115"]
+[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Font/Pacifico-Regular.ttf" id="2_w44bd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8rwi"]
 texture = ExtResource("2_7x43g")
@@ -43,5 +44,5 @@ Button/styles/normal = SubResource("StyleBoxTexture_prx6u")
 Button/styles/pressed = SubResource("StyleBoxTexture_rdh4e")
 Label/colors/font_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
 Label/font_sizes/font_size = 32
-Label/fonts/font = null
+Label/fonts/font = ExtResource("2_w44bd")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_kxwsi")

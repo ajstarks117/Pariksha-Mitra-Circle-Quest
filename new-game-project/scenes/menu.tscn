@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca10w6y8a0opl"]
+[gd_scene load_steps=8 format=3 uid="uid://ca10w6y8a0opl"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_8j45o"]
 [ext_resource type="Texture2D" uid="uid://c70j1b3f44yfi" path="res://assets/math bg.png" id="1_ae2xv"]
 [ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="2_1pl1x"]
+[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Font/Pacifico-Regular.ttf" id="4_dm1fq"]
 
 [sub_resource type="Theme" id="Theme_hnqev"]
 Label/fonts/font = null
 
 [sub_resource type="Theme" id="Theme_e16kv"]
-Button/fonts/font = null
+Button/fonts/font = ExtResource("4_dm1fq")
 
 [sub_resource type="Theme" id="Theme_qae1j"]
-Button/fonts/font = null
+Button/fonts/font = ExtResource("4_dm1fq")
 
 [node name="Menu" type="Control"]
 texture_filter = 1

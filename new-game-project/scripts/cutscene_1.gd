@@ -6,12 +6,12 @@ extends Node2D
 
 
 var dialogue_lines = [
-	"[wave][center][color=white]Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
+	"[center][color=white]Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
 	Let’s dive deeper and uncover the concept behind this phenomenon.
 	[b][i]Understanding the Relationship Between the Circumference and the Diameter[/i][/b]
 	The circumference and diameter of a circle share a fascinating connection that is fundamental to geometry. 
 	Are you ready to explore this relationship? Let's learn together!",
-	"[wave][center][color=white]The ratio of a circle's circumference to its diameter is a constant number, approximately 3.14, known as π (pi).[/color][/center][/wave]
+	"[center][color=white]The ratio of a circle's circumference to its diameter is a constant number, approximately 3.14, known as π (pi).[/color][/center]
 	[center][color=white]This ratio is the same for all circles, no matter how large or small, and is expressed as:
 	[/color][/center]
 	[center][color=white]Circumference (c) ÷ Diameter (d) = π[/color][/center]

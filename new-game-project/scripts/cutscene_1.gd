@@ -6,21 +6,23 @@ extends Node2D
 
 
 var dialogue_lines = [
-	"[center][color=white]Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
-	Let’s dive deeper and uncover the concept behind this phenomenon.
-	[b][i]Understanding the Relationship Between the Circumference and the Diameter[/i][/b]
-	The circumference and diameter of a circle share a fascinating connection that is fundamental to geometry. 
-	Are you ready to explore this relationship? Let's learn together!",
-	"[center][color=white]The ratio of a circle's circumference to its diameter is a constant number, approximately 3.14, known as π (pi).[/color][/center]
-	[center][color=white]This ratio is the same for all circles, no matter how large or small, and is expressed as:
+	"[center][color=white]नमस्कार! मागच्या लेव्हलमध्ये तुम्हाला काही इंटरेस्टिंग दिसलं का? जेव्हा आपण वर्तुळाचा परीघ शोधला आणि व्यासासाठी उत्तर प्रदान केले, तेव्हा वर्तुळ बदलले- आणि त्याचा परिघदेखील!
+आपण खोलात जाऊन या घटनेमागची संकल्पना उलगडूया.
+
+	[b][i]परीघ आणि व्यास यांचा संबंध समजून घेणे :[/i][/b]
+	
+	वर्तुळाचा परीघ आणि व्यास एक आकर्षक संबंध सामायिक करतात जो भूमितीसाठी मूलभूत आहे.
+तुम्ही हे नातं एक्सप्लोर करायला तयार आहात का? आपण एकत्र शिकूया!",
+	"[center][color=white]वर्तुळाच्या परीघाचे त्याच्या व्यासाशी असलेले गुणोत्तर एक स्थिर संख्या आहे, अंदाजे ३.१४, ज्याला π (पाई) म्हणून ओळखले जाते.[/color][/center]
+	[center][color=white]हे गुणोत्तर सर्व वर्तुळांसाठी समान आहे, मग ते कितीही मोठे असो किंवा लहान असो, आणि ते अशा प्रकारे व्यक्त केले जाते:
 	[/color][/center]
-	[center][color=white]Circumference (c) ÷ Diameter (d) = π[/color][/center]
-	[center][color=white]In practice, we approximate π as 3.14 or 22/7, but it’s an irrational number, meaning it goes on forever without repeating![/color][/center]",
-	"[center][color=white]Now, to calculate the circumference of a circle, if we know the diameter (d), we can use the formula:[/color][/center]
-	[center][b][i][color=white]c = π × d[/color][/i][/b][/center]
-	[center][color=white]But if we know the radius (r), we can also use the formula:[/color][/center]
-	[center][b][i][color=white]c = 2 × π × r[/color][/i][/b][/center]
-	[center][color=white]So, by understanding the relationship between the diameter and radius, and the special number π, we can calculate the circumference of any circle![/color][/center]"
+	[center][color=white]परीघ ÷ व्यास  = π[/color][/center]
+	[center][color=white]व्यवहारात, आपण π अंदाजे ३.१४ किंवा २२/७ म्हणून गृहीत धरतो, परंतु ही एक अतार्किक संख्या आहे, म्हणजे ती पुनरावृत्ती न करता कायमचालू राहते![/color][/center]",
+	"[center][color=white]आता, वर्तुळाचा परिघ मोजण्यासाठी, जर आपल्याला व्यास माहित असेल तर आपण सूत्र वापरू शकतो:[/color][/center]
+	[center][b][i][color=white]परिघ = π × व्यास[/color][/i][/b][/center]
+	[center][color=white]परंतु जर आपल्याला त्रिज्या माहित असेल तर आपण सूत्र देखील वापरू शकतो:[/color][/center]
+	[center][b][i][color=white]c = २ × π × त्रिज्या[/color][/i][/b][/center]
+	[center][color=white]त्यामुळे व्यास आणि त्रिज्या आणि π विशेष संख्या यांचा संबंध समजून घेऊन आपण कोणत्याही वर्तुळाचा परिघ मोजू शकतो![/color][/center]"
 ]
 
 var current_line = 0 

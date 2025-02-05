@@ -42,7 +42,7 @@ theme = ExtResource("2_1pl1x")
 [node name="Label" type="Label" parent="Title"]
 layout_mode = 2
 theme = SubResource("Theme_hnqev")
-text = "Circle Quest"
+text = "सर्कल क्वेस्ट"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -68,13 +68,12 @@ layout_mode = 2
 [node name="Play" type="Button" parent="OPTIONS/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_e16kv")
-text = "Play"
+text = "खेळा"
 
 [node name="Exit" type="Button" parent="OPTIONS/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_qae1j")
-text = "Exit
-"
+text = "बंद करा"
 
 [connection signal="pressed" from="OPTIONS/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OPTIONS/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

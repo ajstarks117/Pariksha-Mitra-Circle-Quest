@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://kglyk0f140nj"]
+[gd_scene load_steps=15 format=3 uid="uid://kglyk0f140nj"]
 
 [ext_resource type="Script" path="res://scripts/cutscene_1.gd" id="1_3o8pb"]
 [ext_resource type="Texture2D" uid="uid://dmoe78w1x8app" path="res://assets/bg1.jpg" id="1_cyifn"]
 [ext_resource type="Texture2D" uid="uid://sfny4qqyste5" path="res://assets/Untitled_design-removebg-preview.png" id="3_728h6"]
+[ext_resource type="FontFile" uid="uid://ckymyusegfflp" path="res://assets/fonts/e29d600f-3049-4462-9702-f98bd2ac55ae.ttf" id="3_ptphk"]
 [ext_resource type="FontFile" uid="uid://bahv18ejvns75" path="res://assets/Font/Chalktastic-r78L.ttf" id="3_ql6lh"]
 
 [sub_resource type="Theme" id="Theme_12dl0"]
 RichTextLabel/font_sizes/bold_italics_font_size = 30
 RichTextLabel/font_sizes/normal_font_size = 24
-RichTextLabel/fonts/bold_italics_font = ExtResource("3_ql6lh")
-RichTextLabel/fonts/normal_font = ExtResource("3_ql6lh")
+RichTextLabel/fonts/bold_font = ExtResource("3_ptphk")
+RichTextLabel/fonts/normal_font = ExtResource("3_ptphk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta7q4"]
 
@@ -53,13 +54,13 @@ offset_bottom = 697.0
 theme = SubResource("Theme_12dl0")
 bbcode_enabled = true
 text = "[center][color=white]
-	Hello! Did you notice something interesting in the previous level? When you traced the circle's circumference and provided an input for the diameter, the circle changed—and so did its circumference!
-	Let’s dive deeper and uncover the concept behind this phenomenon.
+	नमस्कार! मागच्या लेव्हलमध्ये तुम्हाला काही इंटरेस्टिंग दिसलं का? जेव्हा आपण वर्तुळाचा परिघ शोधला आणि व्यासासाठी उत्तर प्रदान केले, तेव्हा वर्तुळ बदलले- आणि त्याचा परिघदेखील!
+आपण खोलात जाऊन या घटनेमागची संकल्पना उलगडूया.
 
-	[b][i]Understanding the Relationship Between the Circumference and the Diameter :[/i][/b]
+	[b][i]परिघ आणि व्यास यांचा संबंध समजून घेणे :[/i][/b]
 
-	The circumference and diameter of a circle share a fascinating connection that is fundamental to geometry . 
-	Are you ready to explore this relationship? Let's learn together!"
+	वर्तुळाचा परिघ आणि व्यास एक आकर्षक संबंध सामायिक करतात जो भूमितीसाठी मूलभूत आहे.
+तुम्ही हे नातं एक्सप्लोर करायला तयार आहात का? आपण एकत्र शिकूया!"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(963, 340)
@@ -72,7 +73,7 @@ offset_top = 581.0
 offset_right = 1140.0
 offset_bottom = 637.0
 theme = SubResource("Theme_bdn5f")
-text = "Next -->"
+text = "पुढे जावा -->"
 
 [node name="Previous" type="Button" parent="."]
 offset_left = 841.0
@@ -80,7 +81,7 @@ offset_top = 581.0
 offset_right = 998.0
 offset_bottom = 637.0
 theme = SubResource("Theme_q1u88")
-text = "<-- Previous"
+text = "<-- मागे जावा"
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

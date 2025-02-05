@@ -44,7 +44,7 @@ offset_top = 540.0
 offset_right = 481.0
 offset_bottom = 613.0
 theme = SubResource("Theme_68dag")
-placeholder_text = "ENTER DIAMETER (in cm)"
+placeholder_text = "व्यास टाका (in cm)"
 alignment = 1
 
 [node name="Next" type="Button" parent="."]
@@ -53,7 +53,7 @@ offset_top = 13.0
 offset_right = 1142.0
 offset_bottom = 69.0
 theme = ExtResource("2_0gsjw")
-text = "Next -->"
+text = "पुढे जावा -->"
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

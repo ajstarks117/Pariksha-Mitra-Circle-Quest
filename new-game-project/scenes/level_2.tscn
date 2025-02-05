@@ -79,7 +79,7 @@ offset_top = 553.0
 offset_right = 1071.0
 offset_bottom = 615.0
 theme = ExtResource("4_ex1tr")
-text = "Confirm"
+text = "शोधा"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 889.0
@@ -102,7 +102,7 @@ color = Color(0, 0, 1, 0.3)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Major Arc"
+text = "   महाचाप "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -116,8 +116,7 @@ color = Color(1, 0, 0, 0.3)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Minor Arc
-"
+text = "   लघु चाप "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -127,7 +126,7 @@ offset_top = 16.0
 offset_right = 1127.0
 offset_bottom = 72.0
 theme = ExtResource("4_ex1tr")
-text = "Next -->"
+text = "पुढे जावा -->"
 
 [connection signal="pressed" from="UI/ConfirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

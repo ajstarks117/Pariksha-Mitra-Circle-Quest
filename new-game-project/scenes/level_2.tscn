@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://br2ovdvigwsbw"]
+[gd_scene load_steps=11 format=3 uid="uid://br2ovdvigwsbw"]
 
 [ext_resource type="Script" path="res://scripts/level_2.1.gd" id="1_rkcl6"]
 [ext_resource type="Texture2D" uid="uid://bcl1vcauwrwbq" path="res://assets/circle.png" id="2_6et8j"]
@@ -7,6 +7,13 @@
 [ext_resource type="Script" path="res://scripts/start_marker.gd" id="4_j8bbd"]
 [ext_resource type="Script" path="res://scripts/end_marker.gd" id="5_d3kc0"]
 [ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="7_obhuj"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="8_snabj"]
+
+[sub_resource type="Theme" id="Theme_5kvn8"]
+Label/fonts/font = ExtResource("8_snabj")
+
+[sub_resource type="Theme" id="Theme_nqe7h"]
+Label/fonts/font = ExtResource("8_snabj")
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_rkcl6")
@@ -102,6 +109,7 @@ color = Color(0, 0, 1, 0.3)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme = SubResource("Theme_5kvn8")
 text = "   महाचाप "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -116,14 +124,16 @@ color = Color(1, 0, 0, 0.3)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource("Theme_nqe7h")
 text = "   लघु चाप "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Next" type="Button" parent="."]
-offset_left = 1004.0
+texture_filter = 1
+offset_left = 970.0
 offset_top = 16.0
-offset_right = 1127.0
+offset_right = 1134.0
 offset_bottom = 72.0
 theme = ExtResource("4_ex1tr")
 text = "पुढे जावा -->"

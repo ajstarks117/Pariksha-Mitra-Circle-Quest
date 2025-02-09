@@ -19,7 +19,7 @@ var blue_color = Color(0, 0, 1, 0.3)  # Semi-transparent blue
 func _ready():
 	circle_center = circle_sprite.global_position
 	radius = circle_sprite.texture.get_size().x / 2
-	formula_label.text = "Drag the markers to select an arc."
+	formula_label.text = "चाप निवडण्यासाठी मार्करला दुसऱ्या जाग्यावर न्या."
 	feedback_label.text = ""
 	confirm_button.connect("pressed", Callable(self, "_on_confirm_button_pressed"))
 	
@@ -78,7 +78,7 @@ func update_arcs():
 		major_panel.color = blue_color
 		minor_panel.color = red_color
 	
-	feedback_label.text = "Minor Arc Length: %.2f\nMajor Arc Length: %.2f" % [minor_arc_length, major_arc_length]
+	feedback_label.text = " लघु चाप लांबी: %.2f\nमहाचाप लांबी: %.2f" % [minor_arc_length, major_arc_length]
 
 func _on_confirm_button_pressed():
 	var start_angle = (start_marker.global_position - circle_center).angle()
@@ -92,9 +92,9 @@ func _on_confirm_button_pressed():
 	var total_circumference = TAU * radius
 
 	if minor_arc_length < total_circumference / 2:
-		formula_label.text = "You selected the Minor Arc!"
+		formula_label.text = "आपण निवडले लघु चाप!"
 	else:
-		formula_label.text = "You selected the Major Arc!"
+		formula_label.text = "आपण निवडले महाचाप!"
 
 
 func _on_next_pressed() -> void:

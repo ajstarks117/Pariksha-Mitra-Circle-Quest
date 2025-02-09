@@ -1,16 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://kglyk0f140nj"]
+[gd_scene load_steps=14 format=3 uid="uid://kglyk0f140nj"]
 
 [ext_resource type="Script" path="res://scripts/cutscene_1.gd" id="1_3o8pb"]
 [ext_resource type="Texture2D" uid="uid://dmoe78w1x8app" path="res://assets/bg1.jpg" id="1_cyifn"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="3_6f6c5"]
 [ext_resource type="Texture2D" uid="uid://sfny4qqyste5" path="res://assets/Untitled_design-removebg-preview.png" id="3_728h6"]
-[ext_resource type="FontFile" uid="uid://ckymyusegfflp" path="res://assets/fonts/e29d600f-3049-4462-9702-f98bd2ac55ae.ttf" id="3_ptphk"]
-[ext_resource type="FontFile" uid="uid://bahv18ejvns75" path="res://assets/Font/Chalktastic-r78L.ttf" id="3_ql6lh"]
 
 [sub_resource type="Theme" id="Theme_12dl0"]
 RichTextLabel/font_sizes/bold_italics_font_size = 30
 RichTextLabel/font_sizes/normal_font_size = 24
-RichTextLabel/fonts/bold_font = ExtResource("3_ptphk")
-RichTextLabel/fonts/normal_font = ExtResource("3_ptphk")
+RichTextLabel/fonts/bold_font = ExtResource("3_6f6c5")
+RichTextLabel/fonts/normal_font = ExtResource("3_6f6c5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta7q4"]
 
@@ -20,7 +19,7 @@ RichTextLabel/fonts/normal_font = ExtResource("3_ptphk")
 
 [sub_resource type="Theme" id="Theme_bdn5f"]
 Button/font_sizes/font_size = 22
-Button/fonts/font = ExtResource("3_ql6lh")
+Button/fonts/font = ExtResource("3_6f6c5")
 Button/styles/hover = SubResource("StyleBoxTexture_ta7q4")
 Button/styles/normal = SubResource("StyleBoxTexture_st5qg")
 Button/styles/pressed = SubResource("StyleBoxTexture_2gk30")
@@ -33,7 +32,7 @@ Button/styles/pressed = SubResource("StyleBoxTexture_2gk30")
 
 [sub_resource type="Theme" id="Theme_q1u88"]
 Button/font_sizes/font_size = 22
-Button/fonts/font = ExtResource("3_ql6lh")
+Button/fonts/font = ExtResource("3_6f6c5")
 Button/styles/hover = SubResource("StyleBoxTexture_vts82")
 Button/styles/normal = SubResource("StyleBoxTexture_je5l5")
 Button/styles/pressed = SubResource("StyleBoxTexture_fw0gl")
@@ -47,8 +46,9 @@ offset_bottom = 648.0
 texture = ExtResource("1_cyifn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
 offset_left = 1.0
-offset_top = 52.0
+offset_top = 36.0
 offset_right = 751.0
 offset_bottom = 697.0
 theme = SubResource("Theme_12dl0")
@@ -82,6 +82,9 @@ offset_right = 998.0
 offset_bottom = 637.0
 theme = SubResource("Theme_q1u88")
 text = "<-- मागे जावा"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 8.954
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

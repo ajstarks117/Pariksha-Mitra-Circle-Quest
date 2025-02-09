@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4xvome57id8e"]
+[gd_scene load_steps=8 format=3 uid="uid://b4xvome57id8e"]
 
 [ext_resource type="Script" path="res://scripts/level1.gd" id="1_omein"]
 [ext_resource type="Theme" uid="uid://1d75db2kglin" path="res://assets/label.tres" id="2_0gsjw"]
 [ext_resource type="Script" path="res://scripts/circle.gd" id="2_koe81"]
 [ext_resource type="Texture2D" uid="uid://c5jrb1bcprlwx" path="res://assets/Large tiles/Thick outline/tile_0029.png" id="4_1svpj"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="4_bcqkb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7rgkt"]
 texture = ExtResource("4_1svpj")
@@ -14,6 +15,8 @@ texture_margin_bottom = 10.0
 
 [sub_resource type="Theme" id="Theme_68dag"]
 LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+LineEdit/font_sizes/font_size = 24
+LineEdit/fonts/font = ExtResource("4_bcqkb")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_7rgkt")
 
 [node name="level_1" type="Node2D"]
@@ -48,9 +51,10 @@ placeholder_text = "व्यास टाका (in cm)"
 alignment = 1
 
 [node name="Next" type="Button" parent="."]
-offset_left = 1019.0
+texture_filter = 1
+offset_left = 963.0
 offset_top = 13.0
-offset_right = 1142.0
+offset_right = 1127.0
 offset_bottom = 69.0
 theme = ExtResource("2_0gsjw")
 text = "पुढे जावा -->"

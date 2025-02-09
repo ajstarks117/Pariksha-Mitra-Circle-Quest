@@ -3,13 +3,13 @@ extends Node2D
 
 @onready var label = $RichTextLabel
 @onready var next_button = $Next
-
+@onready var audio_player = $AudioStreamPlayer2D
 
 var dialogue_lines = [
 	"[center][color=white]नमस्कार! मागच्या लेव्हलमध्ये तुम्हाला काही इंटरेस्टिंग दिसलं का? जेव्हा आपण वर्तुळाचा परीघ शोधला आणि व्यासासाठी उत्तर प्रदान केले, तेव्हा वर्तुळ बदलले- आणि त्याचा परिघदेखील!
 आपण खोलात जाऊन या घटनेमागची संकल्पना उलगडूया.
 
-	[b][i]परीघ आणि व्यास यांचा संबंध समजून घेणे :[/i][/b]
+	[i]परीघ आणि व्यास यांचा संबंध समजून घेणे :[/i]
 	
 	वर्तुळाचा परीघ आणि व्यास एक आकर्षक संबंध सामायिक करतात जो भूमितीसाठी मूलभूत आहे.
 तुम्ही हे नातं एक्सप्लोर करायला तयार आहात का? आपण एकत्र शिकूया!",
@@ -19,10 +19,16 @@ var dialogue_lines = [
 	[center][color=white]परीघ ÷ व्यास  = π[/color][/center]
 	[center][color=white]व्यवहारात, आपण π अंदाजे ३.१४ किंवा २२/७ म्हणून गृहीत धरतो, परंतु ही एक अतार्किक संख्या आहे, म्हणजे ती पुनरावृत्ती न करता कायमचालू राहते![/color][/center]",
 	"[center][color=white]आता, वर्तुळाचा परिघ मोजण्यासाठी, जर आपल्याला व्यास माहित असेल तर आपण सूत्र वापरू शकतो:[/color][/center]
-	[center][b][i][color=white]परिघ = π × व्यास[/color][/i][/b][/center]
+	[center][i][color=white]परीघ = π × व्यास[/color][/i][/center]
 	[center][color=white]परंतु जर आपल्याला त्रिज्या माहित असेल तर आपण सूत्र देखील वापरू शकतो:[/color][/center]
-	[center][b][i][color=white]c = २ × π × त्रिज्या[/color][/i][/b][/center]
-	[center][color=white]त्यामुळे व्यास आणि त्रिज्या आणि π विशेष संख्या यांचा संबंध समजून घेऊन आपण कोणत्याही वर्तुळाचा परिघ मोजू शकतो![/color][/center]"
+	[center][i][color=white]c = २ × π × त्रिज्या[/color][/i][/center]
+	[center][color=white]त्यामुळे व्यास आणि त्रिज्या आणि π विशेष संख्या यांचा संबंध समजून घेऊन आपण कोणत्याही वर्तुळाचा परीघ मोजू शकतो![/color][/center]"
+]
+
+var audio_files = [
+	"res://assets/Voices/Dialogue-1.mp3",
+	"res://assets/Voices/Dailogue-2.mp3",
+	"res://assets/Voices/Dialogue-3.mp3"
 ]
 
 var current_line = 0 
@@ -40,6 +46,7 @@ func _process(delta: float) -> void:
 func update_dialogue():
 	if current_line < dialogue_lines.size():
 		label.text = dialogue_lines[current_line]
+		play_voiceover(current_line)
 	else:
 		end_cutscene()
 		
@@ -60,3 +67,12 @@ func _on_previous_pressed() -> void:
 	if current_line > 0:
 		current_line -= 1
 		update_dialogue()
+
+
+func play_voiceover(index):
+	if audio_player.playing:
+		audio_player.stop()
+	
+	if index < audio_files.size():
+		audio_player.stream = load(audio_files[index])
+		audio_player.play()

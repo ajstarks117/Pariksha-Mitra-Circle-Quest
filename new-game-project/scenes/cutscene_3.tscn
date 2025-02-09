@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dmoe78w1x8app" path="res://assets/bg1.jpg" id="1_56dsu"]
 [ext_resource type="Script" path="res://scripts/cutscene_3.gd" id="1_t1exs"]
-[ext_resource type="FontFile" uid="uid://bahv18ejvns75" path="res://assets/Font/Chalktastic-r78L.ttf" id="2_bgvv7"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="3_tdxgc"]
 
 [sub_resource type="Theme" id="Theme_vr20f"]
 RichTextLabel/font_sizes/bold_italics_font_size = 30
 RichTextLabel/font_sizes/normal_font_size = 24
-RichTextLabel/fonts/bold_italics_font = ExtResource("2_bgvv7")
-RichTextLabel/fonts/normal_font = ExtResource("2_bgvv7")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_tdxgc")
+RichTextLabel/fonts/normal_font = ExtResource("3_tdxgc")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qhlwx"]
 load_path = "res://.godot/imported/Untitled_design-removebg-preview.png-62ae626fe1c09e19d4c2de1411782847.ctex"
@@ -21,7 +21,7 @@ load_path = "res://.godot/imported/Untitled_design-removebg-preview.png-62ae626f
 
 [sub_resource type="Theme" id="Theme_qjy0d"]
 Button/font_sizes/font_size = 22
-Button/fonts/font = ExtResource("2_bgvv7")
+Button/fonts/font = ExtResource("3_tdxgc")
 Button/styles/hover = SubResource("StyleBoxTexture_6qriw")
 Button/styles/normal = SubResource("StyleBoxTexture_aidee")
 Button/styles/pressed = SubResource("StyleBoxTexture_vfya1")
@@ -35,10 +35,10 @@ offset_bottom = 648.0
 texture = ExtResource("1_56dsu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_filter = 2
+texture_filter = 1
 offset_left = 4.0
 offset_top = 9.0
-offset_right = 754.0
+offset_right = 621.0
 offset_bottom = 627.0
 theme = SubResource("Theme_vr20f")
 bbcode_enabled = true
@@ -52,7 +52,7 @@ text = "[center][color=white]
 	Are you ready to explore this relationship? Let's learn together!"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(963, 340)
+position = Vector2(895, 349)
 scale = Vector2(1.286, 1.37469)
 texture = SubResource("CompressedTexture2D_qhlwx")
 
@@ -62,7 +62,7 @@ offset_top = 581.0
 offset_right = 1140.0
 offset_bottom = 637.0
 theme = SubResource("Theme_qjy0d")
-text = "Next -->"
+text = "पुढे जावा -->"
 
 [node name="Previous" type="Button" parent="."]
 offset_left = 841.0
@@ -70,7 +70,7 @@ offset_top = 581.0
 offset_right = 998.0
 offset_bottom = 637.0
 theme = SubResource("Theme_qjy0d")
-text = "<-- Previous"
+text = "<-- मागे जावा"
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

@@ -30,11 +30,11 @@ func _on_angle_changed(value: float):
 	update_angle_visualization()
 func update_angle_visualization():
 	# Update labels
-	angle_label.text = "Central Angle: %.1f°" % current_angle
+	angle_label.text = " केंद्री् कोन: %.1f°" % current_angle
 	
 	# Calculate arc length (circumference * (angle/360))
 	var arc_length = 2 * PI * circle_radius * (current_angle / 360.0)
-	arc_length_label.text = "Arc Length: %.2f" % arc_length
+	arc_length_label.text = "कंसाची लांबी: %.2f" % arc_length
 	
 	# Request a redraw
 	queue_redraw()

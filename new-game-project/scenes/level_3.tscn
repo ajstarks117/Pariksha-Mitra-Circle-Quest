@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/level_3.gd" id="1_2uoky"]
 [ext_resource type="Theme" uid="uid://1d75db2kglin" path="res://assets/label.tres" id="2_jfkyu"]
-[ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Font/Pacifico-Regular.ttf" id="2_k2t8m"]
+[ext_resource type="FontFile" uid="uid://3y0d8ra3jcji" path="res://assets/fonts/TiroDevanagariMarathi-Italic.ttf" id="2_pv4bx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxrs7"]
 bg_color = Color(1, 1, 0, 1)
@@ -38,7 +38,7 @@ expand_margin_top = 3.0
 expand_margin_bottom = 3.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_tojnq"]
-font = ExtResource("2_k2t8m")
+font = ExtResource("2_pv4bx")
 font_size = 11
 font_color = Color(0, 0, 0, 1)
 
@@ -71,7 +71,7 @@ layout_mode = 0
 offset_left = -69.0
 offset_top = -3.0
 offset_bottom = 20.0
-text = "Angle Slider"
+text = "एंगल स्लाइडर"
 label_settings = SubResource("LabelSettings_tojnq")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -97,11 +97,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Next" type="Button" parent="."]
-offset_left = 1004.0
-offset_top = 16.0
-offset_right = 1127.0
-offset_bottom = 72.0
+texture_filter = 1
+offset_left = 967.0
+offset_top = 13.0
+offset_right = 1131.0
+offset_bottom = 69.0
 theme = ExtResource("2_jfkyu")
-text = "Next -->"
+text = "पुढे जावा -->"
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

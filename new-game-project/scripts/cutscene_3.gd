@@ -6,48 +6,47 @@ extends Node2D
 @onready var previous_button = $Previous
 
 
-var dialogue_lines = ["[center]Let’s explore the concept from the previous level!
+var dialogue_lines = ["[center]मागील स्तरावरून संकल्पना जाणून घेऊया!
 
-When you slide the slider, the central angle changes, and so does the arc length. A bigger central angle creates a longer arc, while a smaller angle creates a shorter arc.",
-	"[center][b][u]Central Angle and the Measure of an Arc[/u][/b][center]
-In the figure, 'O' is the vertex of angel AOB. An angle whose vertex is at the center of a circle is called a [color=blue]central angle[/color].
+जेव्हा तुम्ही स्लायडर हलवता, तेव्हा मध्य कोण बदलतो आणि त्यासोबतच वक्राची लांबी देखील बदलते. मोठा मध्य कोण मोठा वक्र तयार करतो, तर लहान कोण लहान वक्र तयार करतो.",
+	"[center][b][u]मध्य कोण आणि वक्राचे मापन[/u][/b][center]
+आकृतीत, **'O'** हा **∠AOB** चा शीर्षबिंदू आहे. ज्या कोणाचा शीर्षबिंदू वर्तुळाच्या केंद्रात असतो, त्याला **मध्य कोण** (*Central Angle*) म्हणतात.
 
 [img=400]res://assets/diagram3.png[/img]
 
-For example, think of a big round pizza. If you place a slice with its tip at the center of the pizza, the angle formed at the tip is the central angle.
+उदाहरणार्थ, मोठ्या गोल पिझ्झाची कल्पना करा. जर तुम्ही एखादा तुकडा ठेवला आणि त्याचा टोक वर्तुळाच्या (पिझ्झाच्या) मध्यभागी असेल, तर त्या टोकाशी तयार होणारा कोण **मध्य कोण** (*Central Angle*) असेल.
 
-In the figure, angle AOB is the central angle corresponding to [color=green]arc AZB[/color].
-The measure of the angle subtended at the center by an arc is considered to be the [color=red]measure of the arc[/color] itself.",
+आकृतीत, **∠AOB** हा **त्याला समोर असलेल्या वक्राचा (Arc AB) मध्य कोण** आहे. [color=green]arc AZB[/color].
+एखाद्या वक्राने केंद्रावर तयार केलेल्या कोनाच्या मापनाला **त्या वक्राचा मध्य कोण** (*Central Angle*) मानले जाते.[color=red]कंसाचे माप[/color] स्वत:.",
 
-"[center][b][u]The Measure of a Minor Arc[/u][/b]
-In the figure, the central angle AOY = 70°.
-∴ The measure of the [color=green]minor arc AYQ[/color] is also 70°.
-It is written as:
-[b]m(arc AYQ) = 70°[/b].
+"[center][b][u]लघुकंसाचे माप[/u][/b]
+शेजारील आकृतीमध्ये ∠AOQ या केंद्री कोनाचे मापन 70° आहे.
+∴ [color=green]लघुकंस AYQ[/color] चे माप 70° आहे. 
+हे असे लिहिले जाईल:
+[b]m(कंस  AYQ) = 70°[/b].
 
 [img=300]res://assets/diagram4.png[/img]
 
-[b][u]The Measure of a Major Arc[/u][/b]
-The measure of a [color=purple]major arc[/color] is found using this formula:
-[b]Measure of a major arc = 360° - Measure of the corresponding minor arc[/b][/center]",
+[b][u]विशालकंसाचे माप[/u][/b]
+[color=purple]विशालकंसाचे माप[/color] याचे मापन खालील सूत्राने शोधले जाते:
+[b]विशालकंसाचे माप = 360° - संगत लघुकंसाचे माप[/b][/center]",
 
-"[center]For example, if the [color=green]minor arc XYQ = 70°[/color], then:
-[b]Measure of major arc XYZ = 360° - 70° = 290°[/b].
+"[center]उदाहरणार्थ, जर [color=green]लघुकंस XYQ चे माप = 70° आहे[/color], तर:
+[b]विशालकंसाचे माप XYZ = 360° - 70° = 290°[/b].
 
-[b][u]For Example: [/u][/b]
-Imagine a large circular pizza cut into [b]8 equal slices[/b]. Each slice makes a central angle of:
+[b][u]उदाहरणार्थ: [/u][/b]
+मोठ्या गोल पिझ्झाची कल्पना करा, जो [b]8 समसमान[/b] तुकड्यांमध्ये कापलेला आहे. प्रत्येक तुकडा तयार करणारा मध्य कोण असा असेल:
 [b]360° ÷ 8 = 45°[/b]
 
-- The central angle between any [color=green]two slices[/color] corresponds to the [color=red]minor arc[/color] that connects those two slices. For example, one slice would subtend a minor arc of [b]45°[/b].
-- Now, suppose you eat [color=green]4 slices[/color] of the pizza (half of it). The [color=purple]major arc[/color] left on the pizza is the rest of the circle. Since:
-[b]4 slices = 180° (45° × 4)[/b]
-The major arc is the complement of the minor arc:
-[b]Measure of the major arc = 360° - 180° = 180°[/b].",
+- मध्य कोण [color:green]दोन तुकड्यां[/color] दरम्यान असतो आणि तो [color=red]लघु कंस[/color] दर्शवतो, जो त्या दोन तुकड्यांना जोडतो. उदाहरणार्थ, एका तुकड्यामुळे लघु कंस 45° तयार होतो.
+- आता समजा, तुम्ही [color=green]4 तुकडे[/color] (अर्धा पिझ्झा) खल्ला, तर उरलेला [color=purple]विशालकंस[/color] संपूर्ण वर्तुळाचा उर्वरित भाग असेल. कारण:
+[b]4 तुकडे = 180° (45° × 4)[/b]
+दीर्घ कंस हा लघु कंसाचा पूरक असतो.
+[b]विशालकंसाचे माप  = 360° - 180° = 180°[/b].",
 
-"[center]So, the eaten part (4 slices) corresponds to a [color=red]minor arc[/color] of 180°, and the leftover part corresponds to a [color=purple]major arc[/color] of 180°.
-
-By visualizing the pizza, you can easily understand the relationship between [color=blue]central angles[/color], [color=green]minor arcs[/color], and [color=purple]major arcs[/color][/center]
-	"
+"[center]म्हणून, खाल्लेला भाग (4 तुकडे) [color=red]लघु कंस[/color] असून त्याचे मापन 180° आहे, आणि उरलेला भाग [color=purple]दीर्घ कंस[/color] असून त्याचेही मापन 180° आहे.
+पिझ्झाची कल्पना करून, तुम्ही सहज **[Color=blue]मध्य कोन[/color]**, **[color=green]लघु कंस[/color]**, आणि **[color=purple]दीर्घ कंस[/color]** यांच्यातील संबंध समजू शकता.
+"
 ]
 
 var current_line = 0 

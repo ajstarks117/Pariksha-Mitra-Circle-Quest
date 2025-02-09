@@ -50,7 +50,7 @@ func _input(event):
 					if circumference_displayed:
 						circumference_displayed = false
 						progress = 0.0
-						$Label.text = "Tracing started..."
+						$Label.text = "ट्रेसिंग सुरू झाले..."
 					
 					start_point = mouse_pos
 					is_tracing = true
@@ -60,14 +60,14 @@ func _input(event):
 					start_angle = atan2(mouse_pos.y - circle_center.y, mouse_pos.x - circle_center.x)
 					if start_angle < 0:
 						start_angle += 2 * PI
-					$Label.text = "Tracing started..."
+					$Label.text = "ट्रेसिंग सुरू झाले..."
 			else:
 				# Stop tracing on mouse button release
 				is_tracing = false
 				if len(traced_points) > min_points:
 					check_completion(mouse_pos)
 				else:
-					$Label.text = "Tracing incomplete - try again"
+					$Label.text = "ट्रेसिंग अपूर्ण - पुन्हा प्रयत्न करा"
 					traced_points.clear()
 					start_point = null
 	
@@ -84,7 +84,7 @@ func _input(event):
 		else:
 			# If mouse moves off circle, stop tracing
 			is_tracing = false
-			$Label.text = "Tracing interrupted - try again"
+			$Label.text = "ट्रेसिंग अपूर्ण - पुन्हा प्रयत्न करा"
 			traced_points.clear()
 			start_point = null
 
@@ -94,7 +94,7 @@ func check_completion(current_pos):
 		display_final_circumference()
 		return
 	else:
-		$Label.text = "Tracing incomplete - try again"
+		$Label.text = "ट्रेसिंग अपूर्ण - पुन्हा प्रयत्न करा"
 		traced_points.clear()
 		start_point = null
 
@@ -122,7 +122,7 @@ func update_progress(current_pos):
 	if progress > 1.0:
 		progress = 1.0
 	
-	$Label.text = "Progress: " + str(round(progress * 100)) + "%"
+	$Label.text = "प्रोग्रेस: " + str(round(progress * 100)) + "%"
 
 func calculate_traced_length():
 	var length = 0.0
@@ -136,7 +136,7 @@ func calculate_theoretical_circumference():
 func display_final_circumference():
 	# Calculate theoretical circumference in centimeters
 	var theoretical_circumference = calculate_theoretical_circumference() / pixels_per_cm
-	$Label.text = "Tracing Complete! Circumference: " + str(round(theoretical_circumference * 10) / 10) + " cm"
+	$Label.text = "ट्रेसिंग पूर्ण! परीघ: " + str(round(theoretical_circumference * 10) / 10) + " cm"
 	is_tracing = false
 	circumference_displayed = true
 	progress = 1.0  # Set progress to full
@@ -149,7 +149,7 @@ func set_diameter(new_diameter_cm):
 	is_tracing = false
 	start_point = null
 	draw_circle_outline()
-	$Label.text = "Ready to trace..."
+	$Label.text = "शोधायला तयार..."
 
 func _on_line_edit_text_changed(new_text):
 	# Handle LineEdit text input (expecting centimeters)
@@ -158,7 +158,7 @@ func _on_line_edit_text_changed(new_text):
 		if value > 0:  # Ensure diameter is positive
 			set_diameter(value)  # Value is in centimeters
 		else:
-			$Label.text = "Please enter a positive number"
+			$Label.text = "कृपया एक सकारात्मक संख्या टाका."
 
 func _on_next_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/cutscene_1.tscn")

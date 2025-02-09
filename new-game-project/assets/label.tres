@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://1d75db2kglin"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://1d75db2kglin"]
 
 [ext_resource type="Texture2D" uid="uid://c5jrb1bcprlwx" path="res://assets/Large tiles/Thick outline/tile_0029.png" id="1_enxbx"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="2_mwtni"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yojc"]
 texture = ExtResource("1_enxbx")
@@ -39,7 +40,8 @@ texture_margin_bottom = 10.0
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("2_mwtni")
 Button/styles/hover = SubResource("StyleBoxTexture_5yojc")
 Button/styles/normal = SubResource("StyleBoxTexture_f0u3v")
 Button/styles/pressed = SubResource("StyleBoxTexture_srsj3")
@@ -52,8 +54,9 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 18
-Label/fonts/font = null
+Label/fonts/font = ExtResource("2_mwtni")
 Label/styles/normal = SubResource("StyleBoxTexture_5nfhj")
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/font_sizes/font_size = 18
+LineEdit/fonts/font = ExtResource("2_mwtni")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_3u7gt")

@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://ueuj5qbd8wqc"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://ueuj5qbd8wqc"]
 
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="1_h03l6"]
 [ext_resource type="Texture2D" uid="uid://bopkjnxcei86p" path="res://assets/Large tiles/Thin outline/tile_0000.png" id="2_7x43g"]
 [ext_resource type="Texture2D" uid="uid://b21f1m2surl1p" path="res://assets/Large tiles/Thick outline/tile_0018.png" id="2_qj115"]
 [ext_resource type="FontFile" uid="uid://bisw7xwbvh487" path="res://assets/Font/Pacifico-Regular.ttf" id="2_w44bd"]
@@ -38,7 +39,7 @@ Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 32
-Button/fonts/font = null
+Button/fonts/font = ExtResource("1_h03l6")
 Button/styles/hover = SubResource("StyleBoxTexture_v8rwi")
 Button/styles/normal = SubResource("StyleBoxTexture_prx6u")
 Button/styles/pressed = SubResource("StyleBoxTexture_rdh4e")

@@ -1,11 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckqy5tdvi4gia"]
+[gd_scene load_steps=15 format=3 uid="uid://ckqy5tdvi4gia"]
 
 [ext_resource type="Texture2D" uid="uid://cvocpbir243ih" path="res://assets/endbg.webp" id="1_gsklj"]
 [ext_resource type="Script" path="res://scripts/endscreen.gd" id="1_i54l1"]
 [ext_resource type="Theme" uid="uid://ueuj5qbd8wqc" path="res://assets/Custom.tres" id="3_b2udv"]
 [ext_resource type="Texture2D" uid="uid://bigip300o6m6r" path="res://assets/Large tiles/Thick outline/tile_0001.png" id="4_t2xdw"]
+[ext_resource type="FontFile" uid="uid://c8dgd5bti5vu0" path="res://assets/fonts/TiroDevanagariMarathi-Regular.ttf" id="5_0qdxf"]
 [ext_resource type="Texture2D" uid="uid://c7gud2v3xsvfq" path="res://assets/Large tiles/Thick outline/tile_0000.png" id="5_6xtnc"]
-[ext_resource type="FontFile" uid="uid://3y0d8ra3jcji" path="res://assets/fonts/TiroDevanagariMarathi-Italic.ttf" id="5_8bpd0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oyawv"]
+font = ExtResource("5_0qdxf")
+font_size = 38
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xb8q5"]
 texture = ExtResource("4_t2xdw")
@@ -45,7 +50,7 @@ Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 32
-Button/fonts/font = ExtResource("5_8bpd0")
+Button/fonts/font = ExtResource("5_0qdxf")
 Button/styles/hover = SubResource("StyleBoxTexture_vwsmr")
 Button/styles/normal = SubResource("StyleBoxTexture_cwnfy")
 Button/styles/pressed = SubResource("StyleBoxTexture_xtgb0")
@@ -70,13 +75,14 @@ layout_mode = 0
 offset_left = 311.0
 offset_top = 148.0
 offset_right = 838.0
-offset_bottom = 402.0
+offset_bottom = 398.0
 theme = ExtResource("3_b2udv")
 
 [node name="Label" type="Label" parent="PanelContainer"]
 layout_mode = 2
 theme = ExtResource("3_b2udv")
-text = "धन्यवाद! तुम्ही या खेळातील सर्व संकल्पना आणि वर्तुळाच्या प्रकरणाचे ज्ञान आत्मसात केले आहे. खेळ खेळण्यासाठी धन्यवाद! 🎉😊"
+text = "धन्यवाद तुम्ही या खेळातील सर्व संकल्पना आणि वर्तुळाच्या प्रकरणाचे ज्ञान आत्मसात केले आहे. खेळ खेळण्यासाठी धन्यवाद"
+label_settings = SubResource("LabelSettings_oyawv")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -86,7 +92,7 @@ layout_mode = 0
 offset_left = 311.0
 offset_top = 405.0
 offset_right = 836.0
-offset_bottom = 528.0
+offset_bottom = 516.0
 theme = SubResource("Theme_ocbic")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer2"]

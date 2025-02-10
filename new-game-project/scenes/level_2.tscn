@@ -71,6 +71,7 @@ offset_right = 702.0
 offset_bottom = 614.0
 theme = ExtResource("4_ex1tr")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="FeedbackLabel" type="Label" parent="UI"]
@@ -79,6 +80,7 @@ offset_top = 553.0
 offset_right = 308.0
 offset_bottom = 612.0
 theme = ExtResource("4_ex1tr")
+vertical_alignment = 1
 
 [node name="ConfirmButton" type="Button" parent="UI"]
 offset_left = 851.0
